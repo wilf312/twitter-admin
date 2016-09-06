@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <hello></hello>
+    <p v-for="data in list">{{data.text}}</p>
 
 
   </div>
@@ -8,29 +9,39 @@
 
 <script>
 import Hello from './components/Hello';
+const axios = require('axios');
 
 export default {
   components: {
     Hello,
   },
+  data() {
+    return {
+      list: [],
+    };
+  },
+  methods() {
+  },
+  created() {
+    // const Vue = require('vue');
+    const URL = 'http://107.191.53.189/twitter-search/search.php?q=%E5%A4%A9%E3%82%AF%E3%83%A9';
+    /*  eslint-disable no-console  */
+    const self = this;
+
+    axios.get(URL, {
+    })
+      .then((res) => {
+        console.log(res);
+        self.list = res.data;
+      })
+      .catch((error) => {
+        // console.log(error)
+        if (error) {
+          // location.reload()
+        }
+      });
+  },
 };
-
-// const Vue = require('vue');
-const axios = require('axios');
-const URL = 'http://107.191.53.189/twitter-search/search.php?q=%E5%A4%A9%E3%82%AF%E3%83%A9';
-/*  eslint-disable no-console  */
-
-axios.get(URL, {
-})
-  .then((res) => {
-    console.log(res);
-  })
-  .catch((error) => {
-    // console.log(error)
-    if (error) {
-      // location.reload()
-    }
-  });
 
 </script>
 
