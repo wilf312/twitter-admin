@@ -2,7 +2,8 @@
   <div class="top">
     <ul>
       <li>除外ワード</li>
-      <li>ツイート</li>
+      <li><a v-link="{ path: '/tweetList' }">ツイート</a></li>
+      <li><a v-link="{ path: '/filterUser' }">除外ユーザ</a></li>
       <li>ピックアップユーザー</li>
       <li>収集ワード</li>
     </ul>

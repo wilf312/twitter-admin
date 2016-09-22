@@ -4,27 +4,28 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 // ページファイルの読み込み
-import pHome from './pages/home';
-import pTweetList from './pages/tweetList';
-import pFilterUser from './pages/filterUser';
+import Home from './pages/Home';
+import TweetList from './pages/TweetList';
+import FilterUser from './pages/FilterUser';
 const Foo = { template: '<div>Foo</div>' };
 const Bar = { template: '<div>Bar</div>' };
 const App = {};
 
 const router = new VueRouter({
   hashbang: false,
+  history: true,
   saveScrollPosition: true,
 });
 
 router.map({
   '/': {
-    component: pHome,
+    component: Home,
   },
   '/tweetList': {
-    component: pTweetList,
+    component: TweetList,
   },
   '/filterUser': {
-    component: pFilterUser,
+    component: FilterUser,
   },
   '/foo': {
     component: Foo,
