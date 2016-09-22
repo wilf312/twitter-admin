@@ -1,11 +1,11 @@
 <template>
-  <h1>トップ</h1>
+  <h1><a v-link="{ path: '/' }">ホーム</a></h1>
   <ul>
-    <li>ツイート</li>
-    <li>除外ワード</li>
-    <li>除外ユーザ</li>
-    <li>ピックアップユーザー</li>
-    <li>収集ワード</li>
+    <li><a v-link="{ path: '/tweetList' }">ツイート</a></li>
+    <li><a v-link="{ path: '/filterWord' }">除外ワード</a></li>
+    <li><a v-link="{ path: '/filterUser' }">除外ユーザ</a></li>
+    <li><a v-link="{ path: '/foo' }">ピックアップユーザー</a></li>
+    <li><a v-link="{ path: '/foo' }">収集ワード</a></li>
   </ul>
 </template>
 
