@@ -7,6 +7,7 @@ Vue.use(VueRouter);
 import Home from './pages/Home';
 import TweetList from './pages/TweetList';
 import FilterUser from './pages/FilterUser';
+import FilterWord from './pages/FilterWord';
 const Foo = { template: '<div>Foo</div>' };
 const Bar = { template: '<div>Bar</div>' };
 const App = {};
@@ -37,6 +38,11 @@ router.map({
     name: 'filterUser',
     title: `除外ユーザ | ${TITLE}`,
     component: FilterUser,
+  },
+  '/filterWord': {
+    name: 'filterWord',
+    title: `除外ワード | ${TITLE}`,
+    component: FilterWord,
   },
   '/foo': {
     title: `foo | ${TITLE}`,

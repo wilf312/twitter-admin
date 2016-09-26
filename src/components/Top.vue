@@ -2,7 +2,7 @@
   <div class="top">
     <ul>
       <li>除外ワード</li>
-      <li><a v-link="{ name: 'tweetList', params: { searchWord: '/'} }">ツイート</a></li>
+      <li><a v-link="{ name: 'tweetList' }">ツイート</a></li>
       <li><a v-link="{ path: '/filterUser' }">除外ユーザ</a></li>
       <li>ピックアップユーザー</li>
       <li>収集ワード</li>
