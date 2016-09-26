@@ -1,9 +1,9 @@
 <template>
-  <h1><a v-link="{ path: '/' }">ホーム</a></h1>
+  <h1><a v-link="{ name: 'home' }">ホーム</a></h1>
   <ul>
-    <li><a v-link="{ path: '/tweetList' }">ツイート</a></li>
+    <li><a v-link="{ name: 'tweetList' }">ツイート</a></li>
     <li><a v-link="{ path: '/filterWord' }">除外ワード</a></li>
-    <li><a v-link="{ path: '/filterUser' }">除外ユーザ</a></li>
+    <li><a v-link="{ name: 'filterUser' }">除外ユーザ</a></li>
     <li><a v-link="{ path: '/foo' }">ピックアップユーザー</a></li>
     <li><a v-link="{ path: '/foo' }">収集ワード</a></li>
   </ul>

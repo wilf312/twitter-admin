@@ -33,6 +33,7 @@ import TweetListView from './TweetListView';
 const axios = require('axios');
 const _ = require('lodash');
 
+
 export default {
   components: {
     TweetListView,
@@ -43,10 +44,16 @@ export default {
       isMedia: true,
       isMediaOnly: false,
       isRT: true,
-      searchWord: '天クラ',
+      searchWord: '',
     };
   },
   created() {
+    const DEFAULT_SEARCH_WORD = '天クラ';
+    this.searchWord = (this.$route && this.$route.params &&
+      this.$route.params.searchWord &&
+      this.$route.params.searchWord !== ':searchWord') ?
+    this.$route.params.searchWord : DEFAULT_SEARCH_WORD;
+
     this.search();
   },
   methods: {

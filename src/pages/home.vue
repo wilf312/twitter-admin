@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <my-header></my-header>
-    <!-- <top></top> -->
-
     <div class="nav">
       <my-nav></my-nav>
     </div>
